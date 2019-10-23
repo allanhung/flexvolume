@@ -24,18 +24,16 @@
 apiVersion: apps/v1 # for versions before 1.8.0 use extensions/v1beta1
 kind: DaemonSet
 metadata:
-  name: flexvolume
+  name: ali-flexvolume
   namespace: kube-system
-  labels:
-    k8s-volume: flexvolume
 spec:
   selector:
     matchLabels:
-      name: acs-flexvolume
+      name: ali-flexvolume
   template:
     metadata:
       labels:
-        name: acs-flexvolume
+        name: ali-flexvolume
     spec:
       hostPID: true
       hostNetwork: true
@@ -44,16 +42,16 @@ spec:
         operator: Exists
         effect: NoSchedule
       containers:
-      - name: acs-flexvolume
-        image: flexvolume:***
+      - name: ali-flexvolume
+        image: allanhung/ali-flexvolume
         imagePullPolicy: Always
         securityContext:
           privileged: true
         env:
         - name: ACS_DISK
-          value: "true"
+          value: "false"
         - name: ACS_NAS
-          value: "true"
+          value: "false"
         - name: ACS_OSS
           value: "true"
         - name: ACCESS_KEY_ID

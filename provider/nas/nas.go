@@ -11,7 +11,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/AliyunContainerService/flexvolume/provider/utils"
+	"github.com/allanhung/flexvolume/provider/utils"
 	"github.com/denverdino/aliyungo/nas"
 	log "github.com/sirupsen/logrus"
 )

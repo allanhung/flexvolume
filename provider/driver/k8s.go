@@ -7,12 +7,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/AliyunContainerService/flexvolume/provider/cpfs"
-	"github.com/AliyunContainerService/flexvolume/provider/disk"
-	"github.com/AliyunContainerService/flexvolume/provider/monitor"
-	"github.com/AliyunContainerService/flexvolume/provider/nas"
-	"github.com/AliyunContainerService/flexvolume/provider/oss"
-	"github.com/AliyunContainerService/flexvolume/provider/utils"
+	"github.com/allanhung/flexvolume/provider/cpfs"
+	"github.com/allanhung/flexvolume/provider/disk"
+	"github.com/allanhung/flexvolume/provider/monitor"
+	"github.com/allanhung/flexvolume/provider/nas"
+	"github.com/allanhung/flexvolume/provider/oss"
+	"github.com/allanhung/flexvolume/provider/utils"
 	log "github.com/sirupsen/logrus"
 )
 

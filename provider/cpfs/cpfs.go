@@ -3,7 +3,7 @@ package cpfs
 import (
 	"errors"
 	"fmt"
-	"github.com/AliyunContainerService/flexvolume/provider/utils"
+	"github.com/allanhung/flexvolume/provider/utils"
 	log "github.com/sirupsen/logrus"
 	"os"
 	"path"

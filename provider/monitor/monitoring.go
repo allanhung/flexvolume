@@ -7,16 +7,16 @@ import (
 	"strings"
 	"time"
 
-	"github.com/AliyunContainerService/flexvolume/provider/utils"
+	"github.com/allanhung/flexvolume/provider/utils"
 	log "github.com/sirupsen/logrus"
 )
 
 // const values for monitoring
 const (
 	NSENTER_CMD = "/acs/nsenter --mount=/proc/1/ns/mnt "
-	DISK_BIN    = "/usr/libexec/kubernetes/kubelet-plugins/volume/exec/alicloud~disk/disk"
-	OSS_BIN     = "/usr/libexec/kubernetes/kubelet-plugins/volume/exec/alicloud~oss/oss"
-	NAS_BIN     = "/usr/libexec/kubernetes/kubelet-plugins/volume/exec/alicloud~nas/nas"
+	DISK_BIN    = "/usr/libexec/kubernetes/kubelet-plugins/volume/exec/ali~disk/disk"
+	OSS_BIN     = "/usr/libexec/kubernetes/kubelet-plugins/volume/exec/ali~oss/oss"
+	NAS_BIN     = "/usr/libexec/kubernetes/kubelet-plugins/volume/exec/ali~nas/nas"
 
 	FLEXVOLUME_CONFIG_FILE = "/host/etc/kubernetes/flexvolume.conf"
 	HOST_SYS_LOG           = "/host/var/log/messages"

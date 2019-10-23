@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	driver "github.com/AliyunContainerService/flexvolume/provider/driver"
-	utils "github.com/AliyunContainerService/flexvolume/provider/utils"
+	driver "github.com/allanhung/flexvolume/provider/driver"
+	utils "github.com/allanhung/flexvolume/provider/utils"
 	"os"
 	"strings"
 )
