@@ -37,6 +37,7 @@ type DiskOptions struct {
 
 // the iddentity for http headker
 var KUBERNETES_ALICLOUD_IDENTITY = fmt.Sprintf("Kubernetes.Alicloud/Flexvolume.Disk-%s", utils.PluginVersion())
+
 // default region for aliyun sdk usage
 var DEFAULT_REGION = common.Hangzhou
 
