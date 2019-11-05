@@ -79,7 +79,7 @@ func (p *OssPlugin) Mount(opts interface{}, mountPath string) utils.Result {
 		}
 	}
 	argStr = argStr + "VolumeName: " + opt.VolumeName + ", AkId: " + opt.AkId + ", Bucket: " + opt.Bucket + ", SubPath: " + opt.SubPath + ", Uid: " + opt.Uid + ", Gid: " + opt.Gid + ", url: " + opt.Url + ", OtherOpts: " + opt.OtherOpts
-	log.Infof("Oss Subpath Plugin Mount Args: %s", argStr)
+	log.Infof("Oss Plugin Mount: %s", argStr)
 
 	if err := p.checkOptions(opt); err != nil {
 		utils.FinishError("OSS: check option error: " + err.Error())
@@ -110,7 +110,6 @@ func (p *OssPlugin) Mount(opts interface{}, mountPath string) utils.Result {
 	if err := utils.CreateDest(ossMountPath); err != nil {
 		utils.FinishError("Oss, Create oss Mount Path error: " + err.Error() + ossMountPath)
 	}
-
 	// default use allow_other
 	if !utils.IsMounted(ossMountPath) {
 		mntCmd := fmt.Sprintf("systemd-run --scope -- ossfs %s %s -ourl=%s -o allow_other %s", opt.Bucket, ossMountPath, opt.Url, opt.OtherOpts)
